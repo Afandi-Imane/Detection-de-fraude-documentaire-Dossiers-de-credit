@@ -1,0 +1,29 @@
+{
+  "date_calibration": "2026-08-12 15:49",
+  "methode": "Régression logistique -- poids bruts, sans ajustement manuel",
+  "poids": {
+    "S_business": 0.2028,
+    "S_intra": 0.2551,
+    "S_inter": 0.1769,
+    "S_llm": 0.1625,
+    "S_visual": 0.2027
+  },
+  "seuils": {
+    "validation_automatique_sous": 0.0243,
+    "escalade_analyste_des": 0.0456,
+    "zone_verification_complementaire": [
+      0.0243,
+      0.0456
+    ],
+    "methode_calcul": "SEUIL_HAUT = indice de Youden sur le train ; SEUIL_BAS = 90e percentile des scores légitimes du train"
+  },
+  "formule": "score_final = w_business*S_business + w_intra*S_intra + w_inter*S_inter + w_llm*S_llm + w_visual*S_visual",
+  "metriques_test": {
+    "precision": 0.9286,
+    "recall": 1.0,
+    "f1_score": 0.963,
+    "roc_auc": 0.9883,
+    "n_dossiers_test": 59
+  },
+  "avertissement": "Poids calibres sur un dataset partiellement synthetique (quota API LLM, signal visuel non calcule au niveau dossier). Aucun ajustement manuel du poids LLM applique ici -- a evaluer apres test si une reduction manuelle s'avere necessaire (instabilite observee en usage reel)."
+}

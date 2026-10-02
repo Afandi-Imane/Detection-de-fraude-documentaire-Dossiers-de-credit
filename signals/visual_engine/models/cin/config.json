@@ -1,0 +1,8 @@
+{
+  "threshold": 6.684536933898926,
+  "patch_size": 4,
+  "top_k_patches": 3,
+  "w_con": 0.9,
+  "img_size": 256,
+  "latent_dim": 100
+}
