@@ -13,7 +13,6 @@ venv/
 data/
 
 # Poids visuels trop lourds pour GitHub (~720 Mo chacun)
-# Les laisser sur Hugging Face ; garder config.json, calibration.json, *.npy
 *.pth
 
 # OS / IDE
