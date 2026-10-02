@@ -2,8 +2,6 @@
 
 > Système **multi-signaux** de détection de fraude sur des dossiers de demande de crédit marocains : **règles métier + base de graphe + LLM + vision par ordinateur (GANomaly)**, fusionnés par une régression logistique calibrée.
 
-Projet réalisé chez **PEAQOCK** dans le cadre du stage PFA — ENSAM Casablanca, Département IA & Génie Informatique (2025–2026).
-
 ![Architecture générale](assets/architecture.png)
 
 ---
@@ -179,8 +177,8 @@ L'interface Streamlit affiche le score final, la contribution de chaque signal, 
 ### 1. Cloner et installer
 
 ```bash
-git clone https://github.com/<votre-utilisateur>/<nom-du-repo>.git
-cd <nom-du-repo>
+git clone https://github.com/Afandi-Imane/Detection-de-fraude-documentaire-Dossiers-de-credit.git
+cd Detection-de-fraude-documentaire-Dossiers-de-credit
 python -m venv venv
 source venv/bin/activate        # Windows : venv\Scripts\activate
 pip install -r requirements.txt
@@ -198,11 +196,11 @@ Renseigner dans `.env` les paramètres Neo4j (URI, utilisateur, mot de passe) et
 
 Les checkpoints GANomaly (`.pth`) sont volumineux et hébergés sur Hugging Face :
 
-👉 **[https://huggingface.co/\<votre-utilisateur\>/\<nom-du-modele\>](https://huggingface.co/<votre-utilisateur>/<nom-du-modele>)**
+👉 **[https://huggingface.co/Imaneafa/detection-fraude-ganomaly](https://huggingface.co/Imaneafa/detection-fraude-ganomaly)**
 
 ```bash
 pip install -U huggingface_hub
-huggingface-cli download <votre-utilisateur>/<nom-du-modele> \
+hf download Imaneafa/detection-fraude-ganomaly \
   --local-dir signals/visual_engine/models
 ```
 
